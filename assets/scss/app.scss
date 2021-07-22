@@ -21,16 +21,20 @@ html {
     color: #000;
     height: 100vh;
     width: 170px;
-    background-color: #748194;
     position: fixed;
 }
 
+.nav {
+    margin-top: 60px;
+}
+
 .nav-link {
-    color: #000;
+    color: #807979;
+    margin-top: 10px;
 }
 
 .nav-link:hover {
-    color: antiquewhite;
+    color: #000;
 }
 
 .header {
@@ -76,9 +80,19 @@ html {
     border-radius: 15px;
 }
 
-.menu-item {
-    display: inline;
-    list-style: none;
+.dropdown {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-left: 570px;
+}
+
+.profile {
+    border-radius: 50%;
+}
+
+.dropdown-box {
+    background: none;
+    border: none;
 }
 
 

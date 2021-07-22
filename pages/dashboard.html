@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Dashboard</title>
+
+    <!-- Favicons -->
+    <link rel="icon" href="../assets/img/favicons/favicon.ico">
+
+    <!-- Custom styles for this template with bootstrap css -->
+    <!-- build:css -->
+    <link href="../assets/css/app.css" rel="stylesheet" type="text/css">
+    <!-- endbuild -->
+</head>
+
+<body>
+    <div class="aside">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="company.html">company</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="location.html">Location</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="security.html">Security</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="vistor.html">Vistor</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="my account.html">My Account</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-section">
+        <header>
+            <div class="container padding-element-1">
+                <div class="row">
+                    <div class="col-2 logo">
+                        <img src="../assets/img/falcon.logo.png" alt="" width="40">
+                        <span class="text-sans-serif text-element">falcon</span>
+                    </div>
+                    <div class="col-4">
+                        <div class="search-form">
+                            <form class="d-flex">
+                                <input class="form-control form" type="search" placeholder="Search" aria-label="Search">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="dropdown">
+                            <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="profile" src="../assets/img/profile.img" alt="" width="45">
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">settings</a></li>
+                                <li><a class="dropdown-item" href="#">log in</a></li>
+                                <li><a class="dropdown-item" href="#">log out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="chart">
+        <div class="container padding-element-1">
+            <div class="row">
+                <div class="col-6">
+                    <div id="main" style="width: 600px;height:400px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap 5 Javascript -->
+    <script src="../assets/js/vendor/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="../assets/js/vendor/echarts.js" type="text/javascript"></script>
+    <!-- Custom Javascript -->
+    <!-- build:js -->
+    <script src="../assets/js/app.js"></script>
+    <script type="text/javascript">
+        // based on prepared DOM, initialize echarts instance
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // specify chart configuration item and data
+        var option = {
+            title: {
+                text: 'ECharts entry example'
+            },
+            tooltip: {},
+            legend: {
+                data: ['Sales']
+            },
+            xAxis: {
+                data: ["shirt", "cardign", "chiffon shirt", "pants", "heels", "socks"]
+            },
+            yAxis: {},
+            series: [{
+                name: 'Sales',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+
+        // use configuration item and data specified to show chart
+        myChart.setOption(option);
+    </script>
+    <!-- endbuild -->
+</body>
+
+</html>
