@@ -34,9 +34,6 @@
             <li class="nav-item">
                 <a class="nav-link active" href="vistor.html">Vistor</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="my account.html">My Account</a>
-            </li>
         </ul>
     </div>
 
@@ -62,7 +59,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <li><a class="dropdown-item" href="#">settings</a></li>
-                                <li><a class="dropdown-item" href="#">log in</a></li>
+                                <li><a class="dropdown-item" href="#">My Account</a></li>
                                 <li><a class="dropdown-item" href="#">log out</a></li>
                             </ul>
                         </div>
@@ -76,6 +73,14 @@
             <div class="row">
                 <div class="col-6">
                     <div id="main" style="width: 600px;height:400px;"></div>
+                </div>
+                <div class="col-6">
+                    <div id="doughnut" style="width: 600px;height:400px;"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div id="pie-chart" style="width: 600px;height:400px;"></div>
                 </div>
             </div>
         </div>
@@ -110,6 +115,108 @@
                 name: 'Sales',
                 type: 'bar',
                 data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+
+
+        // use configuration item and data specified to show chart
+        myChart.setOption(option);
+        var myChart = echarts.init(document.getElementById('doughnut'));
+        var option = {
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                top: '5%',
+                left: 'center'
+            },
+            series: [{
+                name: '访问来源',
+                type: 'pie',
+                radius: ['40%', '70%'],
+                avoidLabelOverlap: false,
+                itemStyle: {
+                    borderRadius: 10,
+                    borderColor: '#fff',
+                    borderWidth: 2
+                },
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: '40',
+                        fontWeight: 'bold'
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                data: [{
+                    value: 1048,
+                    name: '搜索引擎'
+                }, {
+                    value: 735,
+                    name: '直接访问'
+                }, {
+                    value: 580,
+                    name: '邮件营销'
+                }, {
+                    value: 484,
+                    name: '联盟广告'
+                }, {
+                    value: 300,
+                    name: '视频广告'
+                }]
+            }]
+        };
+
+
+        // use configuration item and data specified to show chart
+        myChart.setOption(option);
+        var myChart = echarts.init(document.getElementById('pie-chart'));
+        var option = {
+            title: {
+                text: '某站点用户访问来源',
+                subtext: '纯属虚构',
+                left: 'center'
+            },
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+            },
+            series: [{
+                name: '访问来源',
+                type: 'pie',
+                radius: '50%',
+                data: [{
+                    value: 1048,
+                    name: '搜索引擎'
+                }, {
+                    value: 735,
+                    name: '直接访问'
+                }, {
+                    value: 580,
+                    name: '邮件营销'
+                }, {
+                    value: 484,
+                    name: '联盟广告'
+                }, {
+                    value: 300,
+                    name: '视频广告'
+                }],
+                emphasis: {
+                    itemStyle: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
             }]
         };
 

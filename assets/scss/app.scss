@@ -24,6 +24,12 @@ html {
     position: fixed;
 }
 
+.text-element {
+    font-weight: 800;
+    font-size: 30px;
+    color: #2c7be5;
+}
+
 .nav {
     margin-top: 60px;
 }
@@ -31,10 +37,11 @@ html {
 .nav-link {
     color: #807979;
     margin-top: 10px;
+    font-weight: 500;
 }
 
 .nav-link:hover {
-    color: #000;
+    color: #2c7be5;
 }
 
 .header {
