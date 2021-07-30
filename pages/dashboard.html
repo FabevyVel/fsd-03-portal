@@ -12,39 +12,40 @@
 
     <!-- Custom styles for this template with bootstrap css -->
     <!-- build:css -->
+    <link rel="stylesheet" href="../assets/fonts/bootstrap-icons/font/bootstrap-icons.css" type="text/css">
+    <link href="//fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
     <link href="../assets/css/app.css" rel="stylesheet" type="text/css">
     <!-- endbuild -->
 </head>
 
 <body>
     <div class="aside">
+        <div class="flex-column font-weight-extra-bold logo-1">
+            <img class="mr-2" src="../assets/img/falcon.logo.png" alt="Logo " width="58 ">
+            <span class="text-sans-serif font-weight-extra-bold logo-name">falcon</span>
+        </div>
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link active" href="dashboard.html">Dashboard</a>
+                <a class="nav-link active" href="dashboard.html"><i class="bi bi-house icons "></i>Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="company.html">company</a>
+                <a class="nav-link active" href="company.html"><i class="bi bi-building icons"></i>Company</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="location.html">Location</a>
+                <a class="nav-link active" href="location.html"><i class="bi bi-geo-fill icons"></i>Location</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="security.html">Security</a>
+                <a class="nav-link active" href="camera.html"><i class="bi bi-camera icons"></i>Camera</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="vistor.html">Vistor</a>
+                <a class="nav-link active" href="vechicle.html"><i class="bi bi-bicycle icons"></i>Vechical</a>
             </li>
         </ul>
     </div>
-
-    <div class="main-section">
+    <div class="dashboard">
         <header>
             <div class="container padding-element-1">
                 <div class="row">
-                    <div class="col-2 logo">
-                        <img src="../assets/img/falcon.logo.png" alt="" width="40">
-                        <span class="text-sans-serif text-element">falcon</span>
-                    </div>
                     <div class="col-4">
                         <div class="search-form">
                             <form class="d-flex">
@@ -60,7 +61,7 @@
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <li><a class="dropdown-item" href="#">settings</a></li>
                                 <li><a class="dropdown-item" href="#">My Account</a></li>
-                                <li><a class="dropdown-item" href="#">log out</a></li>
+                                <li><a class="dropdown-item" href="../index.html">log out</a></li>
                             </ul>
                         </div>
                     </div>
@@ -71,16 +72,16 @@
     <div class="chart">
         <div class="container padding-element-1">
             <div class="row">
-                <div class="col-6">
-                    <div id="main" style="width: 600px;height:400px;"></div>
+                <div class="col-6 charts-padding-1">
+                    <div class="chart-background" id="main" style="width: 500px;height:400px;"></div>
                 </div>
-                <div class="col-6">
-                    <div id="doughnut" style="width: 600px;height:400px;"></div>
+                <div class="col-6 charts-padding-2">
+                    <div class="chart-background" id="doughnut" style="width: 500px;height:400px;"></div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-6">
-                    <div id="pie-chart" style="width: 600px;height:400px;"></div>
+                <div class="col-6 charts-padding-3">
+                    <div class="chart-background" id="pie-chart" style="width: 500px;height:400px;"></div>
                 </div>
             </div>
         </div>
@@ -223,6 +224,10 @@
         // use configuration item and data specified to show chart
         myChart.setOption(option);
     </script>
+
+
+
+
     <!-- endbuild -->
 </body>
 
