@@ -22,7 +22,6 @@ gulp.task('vendor:js', function() {
             './node_modules/bootstrap/dist/js/*',
             './node_modules/@popperjs/core/dist/umd/popper.*',
             './node_modules/echarts/dist/*'
-
         ])
         .pipe(gulp.dest('./assets/js/vendor'));
 });

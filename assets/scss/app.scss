@@ -1,144 +1,382 @@
-    // Custom bootstrap variable overrides
-    @import "bootstrap_variable_overrides";
-    // Bootstrap and its default variables
-    @import "../../node_modules/bootstrap/scss/bootstrap";
-    // Your style
-    @import "variables";
-    @import "mixins";
-    @import "general";
-    @import "layout";
-    @import "module";
-    /* CUSTOM STYLES
+// Custom bootstrap variable overrides
+@import "bootstrap_variable_overrides";
+// Bootstrap and its default variables
+@import "../../node_modules/bootstrap/scss/bootstrap";
+// Your style
+@import "variables";
+@import "mixins";
+@import "general";
+@import "layout";
+@import "module";
+
+/* CUSTOM STYLES
 -------------------------------------------------- */
-    
-    //Smooth Scroll
-    html {
-        scroll-behavior: smooth;
+
+//Smooth Scroll
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*index page Starts*/
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.a {
+    color: #2c7be5;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.mr-2,
+.mx-2 {
+    margin-right: .5rem!important;
+}
+
+.font-weight-extra-bold {
+    font-weight: 800!important;
+}
+
+.font-weight-extra-bold {
+    font-weight: 800 !important;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .625rem + 2px);
+    padding: .3125rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #344050;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #d8e2ef;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.fs--1 {
+    font-size: .83333rem;
+}
+
+.text-sans-serif {
+    font-family: Poppins, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+}
+
+.fs-5 {
+    font-size: 2.48832rem;
+}
+
+.font-weight-normal {
+    font-weight: 400!important;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.btn-primary-1 {
+    color: #dd4b39;
+    border-color: #dd4b39;
+}
+
+.btn-primary-2 {
+    color: #3c5a99;
+    border-color: #3c5a99;
+}
+
+.small,
+small {
+    font-size: 75%;
+    font-weight: 400;
+}
+
+.h5,
+h5 {
+    font-size: 1.2rem;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Poppins, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #344050;
+}
+
+
+/*index page Ends*/
+
+
+/*dashboard page starts*/
+
+.aside {
+    color: #000;
+    height: 100vh;
+    width: 170px;
+    position: fixed;
+}
+
+.logo-name {
+    font-family: Poppins, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+    color: #2c7be5;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.logo-1 {
+    padding-top: 15px;
+}
+
+.navbar-brand {
+    font-weight: 800;
+}
+
+.nav {
+    margin-top: 20px;
+}
+
+.nav-link {
+    color: #807979;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #2c7be5;
+}
+
+.icons {
+    padding-right: 11px;
+}
+
+.header {
+    color: black;
+}
+
+.padding-element-1 {
+    padding-left: 110px;
+    padding-top: 10px;
+}
+
+.padding-element-2 {
+    padding-left: 150px;
+}
+
+.logo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: -50px
+}
+
+.text-element {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.border-1 {
+    border-radius: 25px;
+    border-width: 1px !important;
+    background-color: white;
+}
+
+.btn-primary {
+    margin-top: 15px;
+}
+
+.search-form {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-right: 10px;
+}
+
+.form {
+    border-radius: 15px;
+}
+
+.dropdown {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-left: 570px;
+}
+
+.profile {
+    border-radius: 50%;
+}
+
+.dropdown-box {
+    background: none;
+    border: none;
+}
+
+.table {
+    font-weight: 500;
+    color: #5e6e82;
+    font-family: open sans, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+}
+
+.card-name {
+    font-size: 22px;
+    color: #344050;
+    font-weight: 600;
+}
+
+.charts-padding-1 {
+    padding-left: 25px;
+}
+
+.charts-padding-2 {
+    padding-left: 60px;
+}
+
+.charts-padding-3 {
+    margin-top: 15px;
+    padding-left: 25px;
+}
+
+.chart-background {
+    background-color: white;
+}
+
+
+/*dashboard page ends*/
+
+
+/*camera page starts*/
+
+.pagination {
+    margin-top: 10px;
+}
+
+
+/*camera page ends*/
+
+
+/* Padding below the footer and lighter body text */
+
+body {
+    background-color: #edf2f9;
+    font-family: Poppins, Arial, sans-serif;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+
+/* Carousel base class */
+
+.carousel {
+    margin-bottom: 4rem;
+}
+
+
+/* Since positioning the image, we need to help out the caption */
+
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+
+/* Declare heights because of positioning of img element */
+
+.carousel-item {
+    height: 32rem;
+}
+
+.carousel-item>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+
+/* Center align the text within the three columns below the carousel */
+
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.marketing h2 {
+    font-weight: 400;
+}
+
+
+/* rtl:begin:ignore */
+
+.marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+}
+
+
+/* rtl:end:ignore */
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+    margin: 5rem 0;
+    /* Space out the Bootstrap <hr> more */
+}
+
+
+/* Thin out the marketing headings */
+
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    /* rtl:remove */
+    letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
     }
-    
-    body {
-        background-color: rgb(250, 245, 245);
+    .featurette-heading {
+        font-size: 50px;
     }
-    
-    .aside {
-        background-color: #fff;
-        height: 100vh;
-        width: 260px;
-        position: fixed;
-        top: 0;
-        left: 0;
+}
+
+@media (min-width: 62em) {
+    .featurette-heading {
+        margin-top: 7rem;
     }
-    
-    .header {
-        z-index: 10;
-        width: 100%;
-    }
-    
-    .header .dashboard {
-        background: #346Cb0;
-        height: 56px;
-        padding-top: 15px;
-    }
-    
-    .navigation {
-        right: 0;
-        top: 0;
-    }
-    
-    .main-section-1 {
-        padding-left: 260px;
-    }
-    
-    .nav-style-1 .nav-item .nav-link {
-        color: #0a0a0a;
-        font-weight: 600;
-        font-size: 15px;
-        font-family: sans-serif;
-    }
-    
-    .navigation .nav-style-1 .nav-link i {
-        padding-right: 15px;
-        color: #abadb3;
-        font-size: 20px;
-    }
-    
-    .nav-style-1 .nav-item .nav-link i:hover {
-        color: #346Cb0;
-    }
-    
-    .nav-style-1 .nav-item .nav-link.active {
-        color: #346Cb0;
-    }
-    /**main section**/
-    
-    .main-section-1 .header {
-        background: #558ccf;
-        height: 56px;
-        position: fixed;
-    }
-    
-    .search-form {
-        padding-top: 15px;
-        padding-left: 15px;
-        padding-top: 10px;
-        color: transparent;
-    }
-    
-    .search-form:hover {
-        color: #fff;
-    }
-    
-    .form-1 {
-        border-radius: 5px;
-        padding-top: 0;
-    }
-    
-    .page-content-section {
-        padding-left: 280px;
-        padding-top: 120px;
-    }
-    
-    .profile-summary {
-        padding-top: 5px;
-        bottom: 0;
-        right: 0;
-    }
-    
-    .dropdown-1 {
-        padding-top: 0;
-        .border-item {
-            border-bottom: solid 1px #888c9b;
-            padding-bottom: 10px;
-        }
-    }
-    
-    .dropdown-toggle {
-        background: transparent;
-        height: 50px;
-        margin: 5px 0;
-        border: none;
-        .profile-img {
-            width: 32px;
-            border-radius: 50%;
-        }
-        &:after {}
-        &:focus,
-        &:hover {
-            background-color: #558ccf;
-        }
-    }
-    
-    .dropdown-1 {
-        .dropdown-menu {
-            a {
-                color: #34343f;
-            }
-            a:hover {
-                background-color: #558ccf;
-                transition: 3ms;
-            }
-            a:hover {
-                color: #fff;
-            }
-        }
-    }
+}
